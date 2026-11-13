@@ -1,0 +1,149 @@
+
+:root {
+    --cor-primaria: #6C63FF;
+    --cor-primaria-hover: #5148D8;
+    --cor-secundaria: #A59EFF;
+
+  
+    --cor-fundo: #F0F2F5;
+    --cor-container: #FFFFFF;
+
+
+    --cor-texto: #333333;
+    --cor-texto-secundario: #777777;
+    --cor-texto-claro: #999999;
+
+  
+    --cor-borda: #DDDDDD;
+    --cor-foco: #6C63FF;
+    --cor-placeholder: #AAAAAA;
+
+
+    --cor-sombra: rgba(0, 0, 0, 0.10);
+    --cor-overlay: rgba(108, 99, 255, 0.08);
+
+    --cor-sucesso: #28A745;
+    --cor-erro: #E74C3C;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Página */
+body {
+    background: var(--cor-fundo);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container do login */
+.login-container {
+    background: var(--cor-container);
+    width: 350px;
+    max-width: 100%;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--cor-sombra);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+/* Subtítulo */
+.subtitulo {
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Campos */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--cor-texto);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    color: var(--cor-texto);
+    background: var(--cor-container);
+    transition: 0.3s;
+}
+
+.campo input::placeholder {
+    color: var(--cor-placeholder);
+}
+
+.campo input:focus {
+    border-color: var(--cor-foco);
+    box-shadow: 0 0 0 3px var(--cor-overlay);
+}
+
+/* Botão de login */
+.btn-login {
+    width: 100%;
+    padding: 13px;
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: var(--cor-primaria-hover);
+}
+
+/* Cadastro */
+.cadastro {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+}
+
+.cadastro a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cadastro a:hover {
+    color: var(--cor-primaria-hover);
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    .login-container {
+        padding: 25px;
+    }
+}
